@@ -4,6 +4,8 @@ lines = input.read.split
 
 checked_nums = { 0 => true }
 
+product = 0
+
 lines.each_with_index do |li, i|
   num = li.to_i
   found_outer = false
@@ -15,8 +17,7 @@ lines.each_with_index do |li, i|
     lines.drop(i2).each do |nn|
       nn = nn.to_i
       if num + num_2 + nn == 2020
-        puts "#{nn} + #{num} + #{num_2}= 2020"
-        puts "#{nn} * #{num} * #{num_2}= #{nn * num * num_2}"
+        product = nn * num * num_2
         found = true
 
         break
