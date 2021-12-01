@@ -1,4 +1,4 @@
-depths = File.readlines('inputs/day1.txt').map(&:to_i)
+depths = File.readlines('input.txt').map(&:to_i)
 
 puts depths.each_cons(2).inject(0) { |inc, pair| pair.last > pair.first ? inc + 1 : inc }
 
